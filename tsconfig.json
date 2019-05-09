@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",                         
+    "module": "system",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "www",
+    // "outFile": "src/load.js",
+    "moduleResolution": "node",
+    "lib": [ "es2015", "dom" ],
+  },
+  "include": [
+    "src/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "typings"
+  ]
+}
