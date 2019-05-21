@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
+    "outDir": "./www/Bundles/",
+    "noImplicitAny": true,
+    "module": "es6",
     "target": "es5",                         
-    "module": "system",
-    "strict": true,
-    "esModuleInterop": true,
-    "outDir": "www",
-    // "outFile": "src/load.js",
-    "moduleResolution": "node",
-    "lib": [ "es2015", "dom" ],
+    "allowJs": true,
+    "lib": [ 
+      "es2015",
+       "dom",
+       "es2015",
+       "es2015.core",
+       "es2015.collection",
+       "es2015.iterable"
+       ],
   },
   "include": [
     "src/*.ts"

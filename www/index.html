@@ -1,58 +1,16 @@
 <html>
     <head>
         <script type="text/javascript" id="CcIframeApiScript" src="https://design.basicinvite.com/Resources/Generated/IframeApi.js"></script>
-        <!-- <script type="text/javascript" src="https://www.basicinvite.com/node_modules/core-js/client/shim.min.js"></script> -->
-        <!-- <script type="text/javascript" src="https://www.basicinvite.com/node_modules/zone.js/dist/zone_bi_patched.js"></script> -->
-        <!-- <script type="text/javascript" src="https://www.basicinvite.com/node_modules/reflect-metadata/Reflect.js"></script> -->
-        <script type="text/javascript" src="/node_modules/traceur/bin/traceur.js"></script>
-        <script type="text/javascript" src="https://www.basicinvite.com/node_modules/systemjs/dist/system.src.js"></script>
-        <!-- <script src="/systemjs/system.src.js"></script> -->
-        <script>
-            System.trace = true;
-            System.config({
-                paths : {
-                    'npm:' : '/node_modules/',
-                },
-                map :{
-                    '@aurigma' : 'npm:@aurigma',
-                    'underscore': 'npm:underscore/underscore-min.js',
-                    'linq-iterator' : 'npm:linq-iterator/index.js',
-                    'angular' : 'npm:angular/angular.min.js',
-                    'jquery' : 'npm:jquery/dist/jquery.min.js',
-                    'linq/linq' : 'npm:linq/linq.min.js',
-                    'linq' : 'npm:linq/linq.min.js',
-                    'vcard-parser' : 'npm:vcard-parser/lib/vcard.js',
-                },
-                packages :{
-                    '@aurigma/design-atoms/Colors': {
-                        main: 'index',
-                    },
-                    '@aurigma/design-atoms/Math': {
-                        main: 'index',
-                    },
-                    '@aurigma/design-atoms/Model/Product': {
-                        main: 'index',
-                    },
-                    '@aurigma/design-atoms/Model/Product/Items': {
-                        main: 'index',
-                    },
-                    '.': {
-                        defaultExtension: 'js'
-                    },
-                },
-            });
-            </script> 
+        <script type="text/javascript" src="bundles/bundle.js"></script>
     </head>
     <body>
         <h1>Design Atoms Sample</h1>
-        <script>        
-            System.import('App.js').then(function (module) {
-                let app = new module.App();
-                app.start(); 
-            })
-        </script>
         <div>
             <iframe id="product-viewer" width="100%" height="800px"></iframe>
+        </div>
+
+        <div>
+            <button id="changeColor">Change Color</button>
         </div>
     </body>
 </html>
