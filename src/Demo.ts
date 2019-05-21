@@ -42,7 +42,8 @@ export class Demo2 {
             let product = await editor.getProduct();
             let model = await product.getProductModel();
             document.getElementById('changeColor').addEventListener('click', async () =>{
-                let items = await product.getItems((item: any, args: any) => ~item.name.indexOf(args.name), {name: 'text_'});
+                let items = await product.getItems((item: any, args: any) => ~item.name.indexOf(args.name), {name: 'text-'});
+                console.log('items to change', items)
                 for (let item of items) {
                     if (item.color) {
                         item.color = ColorFactory.createColor('#ff0000');
